@@ -1,0 +1,11 @@
+.topCheatSheets-container{
+    width: 100%;
+}
+
+.topCheatSheets{
+    width: 75%;
+    list-style-type: none;
+    margin-left: 5%;
+
+
+}
