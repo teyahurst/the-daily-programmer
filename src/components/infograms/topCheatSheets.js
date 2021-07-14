@@ -10,18 +10,18 @@ class TopCheatSheets extends React.Component{
 
         return(
             <div className='topCheatSheets-container'>
+                <ul className='topCheatSheets-List' >
                 {topCheatSheets.map((img, i) => {
                     return(
-                        <ul className='topCheatSheets' key={i}>
-                            <li className='topCheatSheets'>
+                            <li className='topCheatSheets' key={i}>
                                 <ModalImage
                                     small={img}
                                     large={img}
                                     alt='CheatSheet'/>
                             </li>
-                        </ul>
                     )
                 })}
+                </ul>
             </div>
         )
     }

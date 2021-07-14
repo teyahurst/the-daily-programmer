@@ -8,6 +8,7 @@ class TopNews extends React.Component {
     static contextType = ApiContext;
     render() {
         const { newsList } = this.context;
+
         
         const topNews = newsList.slice(0, 5)
 

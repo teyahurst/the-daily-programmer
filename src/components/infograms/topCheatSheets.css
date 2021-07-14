@@ -9,3 +9,11 @@
 
 
 }
+
+.topCheatSheets{
+    max-width: 45%;
+}
+
+.topCheatSheets-List{
+    display: flex;
+}

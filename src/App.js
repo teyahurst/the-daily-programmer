@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import ApiContext from './ApiContext'
 
-
+import newsList from './newsList';
 
 import Header from './components/header/header';
 import NewsList from './components/newsList/newsList';
@@ -16,22 +16,11 @@ import TopCheatSheets from './components/infograms/topCheatSheets';
 
 class App extends React.Component{
   state = {
-    newsList: [],
+    newsList: newsList.articles
     
   }
 
-  componentDidMount(){
-    const apiKey = process.env.REACT_APP_API_KEY;
-
-    
-    fetch(`https://newsapi.org/v2/everything?q=software-engineering&pageSize=5&language=en&apiKey=${apiKey}`)
-    .then(response => response.json())
-    .then(data => {
-        this.setState({
-          newsList: data.articles
-        })
-    })
-  }
+  
 
   
 
@@ -52,6 +41,8 @@ class App extends React.Component{
 
 
   render(){
+   
+
     const value = {
       newsList: this.state.newsList,
     }
