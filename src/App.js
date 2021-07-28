@@ -2,7 +2,7 @@ import React from 'react';
 import { Route } from 'react-router-dom';
 import ApiContext from './ApiContext'
 
-import newsList from './newsList';
+
 
 import Header from './components/header/header';
 import NewsList from './components/newsList/newsList';
@@ -16,11 +16,20 @@ import TopCheatSheets from './components/infograms/topCheatSheets';
 
 class App extends React.Component{
   state = {
-    newsList: newsList.articles
+    newsList: []
     
   }
 
-  
+  componentDidMount(){
+    fetch('https://stark-plains-19583.herokuapp.com/news')
+      .then(res =>  res.json())
+      .then(data => {
+        this.setState({
+          newsList: data.articles
+        })
+      })
+      
+  }
 
   
 
