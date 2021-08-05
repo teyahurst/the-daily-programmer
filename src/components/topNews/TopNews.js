@@ -7,27 +7,34 @@ import Results from '../results/results';
 class TopNews extends React.Component {
     static contextType = ApiContext;
     render() {
-        const { newsList } = this.context;
+        const { articles } = this.context;
 
         
-        const topNews = newsList.slice(0, 5)
+        const topNews = articles.sort((a, b) => {
+            return (b.likes) - (a.likes)
+        })
+        .slice(0, 5)
 
+        
+        
         
 
         return(
             <div className='TopNewsResults'>
-                {topNews.map((article) => {
+                {topNews.map((article, index) => {
                         return(
-                        <ul className='Results-list' key={article.url}>
+                        <ul className='Results-list' key={index}>
                             <li className='results-list' >
                                 
-                                <Results
-                                    
+                            <Results
+                                    id={article.article_id}
                                     title={article.title}
-                                    author={article.author}
-                                    publishedAt={article.publishedAt}
-                                    url={article.url}
-                                    content={article.description}/>
+                                    url={article.article_url}
+                                    urlToImg={article.urltoimage}
+                                    likes = {article.likes}
+                                    dislikes = {article.dislikes}
+                                    content = {article.content}
+                                    />
                             </li>
                         </ul>
                         

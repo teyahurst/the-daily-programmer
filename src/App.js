@@ -16,24 +16,42 @@ import TopCheatSheets from './components/infograms/topCheatSheets';
 
 class App extends React.Component{
   state = {
-    newsList: []
-    
+    articles: [],
+  
   }
 
   componentDidMount(){
-    fetch('https://stark-plains-19583.herokuapp.com/news')
-      .then(res =>  res.json())
-      .then(data => {
+    
+    
+    fetch('http://localhost:3000/news')
+      .then(res => res.json())
+         
+
+    fetch('http://localhost:3000/articles')
+      .then(res => res.json())
+      .then(articles => {
         this.setState({
-          newsList: data.articles
+          articles: articles,
+
+          
         })
       })
-      
+   
+    
   }
+
+ 
+  
+  
+
+  
+
 
   
 
   renderMain(){
+   
+
     return(
     <div>
       <Route exact path={'/'} component={TopNews}/>
@@ -51,10 +69,14 @@ class App extends React.Component{
 
   render(){
    
-
+   
     const value = {
-      newsList: this.state.newsList,
-    }
+      articles: this.state.articles,
+      likes: this.state.likes,
+      dislikes: this.state.dislikes
+    }    
+
+    
 
     return (
       <ApiContext.Provider value={value}>
@@ -64,6 +86,7 @@ class App extends React.Component{
           </div>
           <main className='App-Main'>
             {this.renderMain()}
+            
             
             
             
