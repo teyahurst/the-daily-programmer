@@ -1,3 +1,5 @@
+require('.dotenv').config()
+
 import React from 'react';
 import { Route } from 'react-router-dom';
 import ApiContext from './ApiContext'
@@ -11,6 +13,8 @@ import CheatSheets from './components/infograms/CheatSheets';
 import TopNews from './components/topNews/TopNews';
 import TopCheatSheets from './components/infograms/topCheatSheets';
 
+import { news_endpoint, articles_endpoint }  from ('./config')
+
 
 
 
@@ -23,11 +27,11 @@ class App extends React.Component{
   componentDidMount(){
     
     
-    fetch('http://localhost:3000/news')
+    fetch(news_endpoint)
       .then(res => res.json())
          
 
-    fetch('http://localhost:3000/articles')
+    fetch(articles_endpoint)
       .then(res => res.json())
       .then(articles => {
         this.setState({

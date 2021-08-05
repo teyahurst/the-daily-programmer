@@ -1,5 +1,6 @@
 require('dotenv').config()
 
 export default {
-    apiKey: process.env.REACT_APP_API_KEY,
+    news_endpoint: process.env.NEWS_ENDPOINT,
+    articles_endpoint: process.env.ARTICLE_ENDPOINT
 }
