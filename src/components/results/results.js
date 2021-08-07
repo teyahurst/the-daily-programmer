@@ -19,7 +19,7 @@ class Results extends React.Component{
 
     handleVote(vote){
         
-         return fetch('http://localhost:3000/articles', {
+         return fetch('https://stark-plains-19583.herokuapp.com/articles', {
             method: 'PATCH',
             headers: {
                 'content-type': 'application/json'
