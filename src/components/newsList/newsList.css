@@ -1,7 +1,13 @@
 .newsList{
     font-size: 12px;
-    list-style-type: none;
+    width: 100%;
+
     
 }
 
 
+@media all and (min-width: 900px){
+    .newsList{
+        margin-left: 10%;
+    }
+}

@@ -24,13 +24,13 @@ class NewsList extends React.Component{
         return (
             
             <div className='newsList'>
-                <h2>News</h2>
+                
                
                     {articles.map((article) => {
                         
                         return(
                             
-                        <ul className='NewsList' key={article.article_id}>
+                        <ul className='NewsList-ul' key={article.article_id}>
                             <li className='NewsResults'>
                                 
                                 <Results

@@ -35,24 +35,24 @@ class CheatSheets extends React.Component{
         
         return(
             <div className='container'>
-                
+                <ul className='Thumbnail-img-list'>
                 {imageList.map((img, i) => {
                     return(
-                        <div className='image-list' key={i}>
-                            <ul className='Thumbnail-img-list'>
+                        
                                 <li className='Modal-img' key={i}> 
                                     <ModalImage 
                                         small={img}
                                         large={img}
-                                        alt='CheatSheets'/>
+                                        alt='CheatSheets'
+                                        className='cheatsheets-thumbnail'/>
                                 </li>
-                            </ul>
-                        </div>
                             
+                        
+                         
                         
                     )
                 })}
-                
+                </ul>
 
                 
             </div>

@@ -3,7 +3,7 @@ import { Route } from 'react-router-dom';
 import ApiContext from './ApiContext'
 
 
-
+import './app.css'
 import Header from './components/header/header';
 import NewsList from './components/newsList/newsList';
 import PublicApi from './components/public-api/public-api';
@@ -41,11 +41,6 @@ class App extends React.Component{
     
   }
 
- 
-  
-  
-
-  
 
 
   
@@ -54,7 +49,7 @@ class App extends React.Component{
    
 
     return(
-    <div>
+    <div className='Homepage'>
       <Route exact path={'/'} component={TopNews}/>
       <Route path={'/news'} component={NewsList}/>
       <Route path={'/cheatsheets'} component={CheatSheets}/>
@@ -84,12 +79,10 @@ class App extends React.Component{
         <div className='App'>
           <div className='App-Header-and-Nav'>
             <Header/>
+            
           </div>
           <main className='App-Main'>
             {this.renderMain()}
-            
-            
-            
             
           </main>
         </div>

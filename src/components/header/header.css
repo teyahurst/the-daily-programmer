@@ -1,4 +1,50 @@
+@import url('https://fonts.googleapis.com/css2?family=News+Cycle&family=Oswald:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab&display=swap');
+/*condense ^^ */
+
+
 h1{
-    text-align: center;
-    font-size: 36px;
+    text-align: left;
+    font-size: 2.8rem;
+    font-family: 'Bebas Neue', sans-serif;
+    color: rgb(58, 56, 56);
+    font-weight: 750;
+    margin-left: 5%;
+    width: 100%;
+    height: 100px;
+   
+}
+
+.Header-Link{
+    width: 100%;
+}
+
+
+.App-Header{
+    width: 100%;
+    
+}
+
+header a:link, a:visited{
+    text-decoration: none;
+    color: rgb(31, 30, 30)
+}
+
+.header{
+    background-color: rgb(172, 170, 170);
+    width: 100%;
+    margin-bottom: 5%;
+}
+
+@media all and (min-width: 900px){
+    h1{
+        text-align: center;
+        font-size: 5rem;
+        margin-top: 1%;
+        width: 80%;
+    }
+
+    .header{
+        height: 150px;
+    }
 }

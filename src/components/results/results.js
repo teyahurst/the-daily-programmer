@@ -1,5 +1,8 @@
 import React from 'react';
 import './results.css';
+import thumbsup from '../infograms/images/images/thumbs-up.png'
+import thumbsdown from '../infograms/images/images/thumbs-down.png'
+
 
 
 
@@ -15,7 +18,7 @@ class Results extends React.Component{
         }
     }
 
-    
+
 
     handleVote(vote){
         
@@ -44,9 +47,10 @@ class Results extends React.Component{
             this.setState({
                 likes: this.state.likes + 1
             })
-        })
-        
+        })   
     }
+
+
 
     handleDownvote = () => {
         const vote = {
@@ -62,6 +66,8 @@ class Results extends React.Component{
             })
         })
     }
+
+    
         
 
     
@@ -75,22 +81,30 @@ class Results extends React.Component{
             <div className='Results'>
                 
                 <a className='Results-Link' href={url} target="_blank" rel='noreferrer' name='article_url'>
+                    
                     <button className='results-button'>
                         <ul className='item'>
                             
-                            <li className='article-id'></li>
-                            <li className='title'>{title}</li>
-                            <li className='news-img-url'><img src={urlToImg} className='news-img' alt='img'/></li>
-                            <br/>
-                            <br />
-                            <li className='description'>{content}</li>
-                            
+                            <li className='article'>
+                                <div className='article-thumbnail-container'>
+                                    <img className='news-img' src={urlToImg} alt='articlethumbnail'/>
+                                </div>
+                                <h3 className='title'>{title}</h3>
+                                <p className='description'>{content}</p>
+                                
+                            </li>
+                                            
                         </ul>
+                        
+                       
+                        
                     </button>
                 </a>
+                <div className='likes-dislikes-container'>
+                                <button onClick={this.handleUpvote} className='likes-button'><img src={thumbsup} className='thumbs-up-icon' alt='thumbs-up'/> <p className='likes-num'>{this.state.likes}</p></button>
+                                <button onClick={this.handleDownvote} className='dislikes-button'><img src={thumbsdown} className='thumbs-down-icon' alt='thumbs-down'/><p className='dislikes-num'>{this.state.dislikes}</p></button>
+                            </div>
                 
-                <button onClick={this.handleUpvote}>Likes {this.state.likes}</button>
-                <button onClick={this.handleDownvote}>Dislikes {this.state.dislikes}</button>
                 
                 
                 

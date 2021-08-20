@@ -1,5 +1,5 @@
 import React from 'react';
-
+import './public-api.css'
 import PublicApiForm from '../publicApiForm/publicApiForm';
 import PublicApiResultsList from '../publicApiResultsList/public-api-results-list';
 
@@ -69,7 +69,9 @@ class PublicApi extends React.Component {
         
 
         return(
-           <div>
+           <div className='public-api'>
+               <h4>Search for a category and receive a list of free public API's</h4>
+               <br/>
                <PublicApiForm onSubmit={this.handleSubmit}>
                    <div className='field'>
                        <label htmlFor='public-api-input'>

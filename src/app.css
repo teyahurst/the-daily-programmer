@@ -1,0 +1,37 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 12px;
+    background-color: whitesmoke;
+}
+
+ul {
+    list-style-type: none;
+    
+}
+
+.App-Header-and-Nav{
+    background-color: rgb(172, 170, 170);
+}
+
+@media all and (min-width: 900px){
+
+    .Homepage{
+        display: flex;
+        flex-direction: row-reverse;
+        margin-top: 5%;;
+    }
+
+    .App-Header-and-Nav{
+        height: 150px;
+        width: 100%;
+        background-color: rgb(172, 170, 170);
+        border: 1px solid rgb(172, 170, 170)
+        
+    }
+
+    
+}

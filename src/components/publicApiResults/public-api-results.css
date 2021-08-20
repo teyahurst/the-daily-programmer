@@ -1,3 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto+Slab&display=swap');
+
+
+
 .api-results-link{
     width: 300px;
+}
+
+.api-results-link{
+    max-width: 500px;
+    width: 80%;
+    height: 75px;
+    margin-top: 1%;
+    margin-left: 3%;
+    font-family: 'Roboto Slab', sans-serif;
+    border-radius: 8px;
+    border: 1px solid gray;
+}
+
+h5{
+    font-size: 16px;
+    
 }

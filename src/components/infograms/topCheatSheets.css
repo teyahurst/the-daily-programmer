@@ -1,19 +1,51 @@
 .topCheatSheets-container{
     width: 100%;
-}
-
-.topCheatSheets{
-    width: 75%;
-    list-style-type: none;
-    margin-left: 5%;
-
-
-}
-
-.topCheatSheets{
-    max-width: 45%;
+    height: 100%;
+   
+    
+   
 }
 
 .topCheatSheets-List{
     display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    max-height: 1000px;
+}
+
+
+
+
+.modal-list{
+    margin-top: 15%;
+    display: flex;
+    flex-direction: row;
+    width: 50%;
+    
+}
+
+
+.thumbnail{
+    margin-left: 5%;
+    height: auto;
+    
+}
+
+
+@media all and (min-width: 900px){
+    .topCheatSheets-container{
+        width: 25%;
+        justify-content: flex-end;
+        margin-left: 1%;
+    }
+
+    .topCheatSheets-List{
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+
+    .thumbnail{
+        margin-left:5%;
+        max-height: 300px;
+    }
 }

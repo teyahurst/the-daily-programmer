@@ -7,14 +7,14 @@ function Header(){
     return (
         <div className='header'>
             <header className='App-Header'>
-                <h1 className='Header-Link'>
-                    <Link to={'/'}>
+                <h1>
+                    <Link to={'/'} className='Header-Link'>
                         The Daily Programmer
                     </Link>
-                    
+                    <NavBar/>
                 </h1>
-
-                <NavBar/>
+                
+                
             </header>
         </div>
     )
