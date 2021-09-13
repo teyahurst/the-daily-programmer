@@ -2,13 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import Results from './results';
-
+import TopCheatSheets from '../components/infograms/topCheatSheets';
 
 // this is the test case
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<BrowserRouter><Results /></BrowserRouter>, div);
+  ReactDOM.render(<BrowserRouter><TopCheatSheets /></BrowserRouter>, div);
   ReactDOM.unmountComponentAtNode(div);
 });

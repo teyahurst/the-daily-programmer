@@ -13,6 +13,6 @@ import Html2 from '../infograms/images/HTML/html5-elements.png';
 import JavaScript1 from '../infograms/images/JavaScript/JS1.jpg';
 import JavaScript2 from '../infograms/images/JavaScript/JS2.jpg';
 
-const imageList = [Css1, Css2, Css5, Css3, Css6, Debug, Html, Html2, JavaScript1, JavaScript2, Css4]
+const ImageList = [Css1, Css2, Css5, Css3, Css6, Debug, Html, Html2, JavaScript1, JavaScript2, Css4]
 
-export default imageList;
+export default ImageList;

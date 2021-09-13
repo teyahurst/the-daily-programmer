@@ -2,13 +2,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
-import PublicApiResults from './public-api-results';
-
+import NavBar from '../components/navbar/navbar';
 
 // this is the test case
 it('renders without crashing', () => {
   const div = document.createElement('div');
 
-  ReactDOM.render(<BrowserRouter><PublicApiResults /></BrowserRouter>, div);
+  ReactDOM.render(<BrowserRouter><NavBar /></BrowserRouter>, div);
   ReactDOM.unmountComponentAtNode(div);
 });

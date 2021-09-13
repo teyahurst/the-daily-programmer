@@ -6,7 +6,7 @@ import ReactDOM from 'react-dom';
 import { BrowserRouter } from 'react-router-dom';
 
 // make the App component available
-import Header from './header';
+import Header from '../components/header/header';
 
 // this is the test case
 it('renders without crashing', () => {

@@ -2,7 +2,7 @@ import React from 'react';
 import './CheatSheets.css';
 import ModalImage from 'react-modal-image';
 
-import imageList from '../ImageList/imageList';
+import ImageList from '../ImageList/imageList';
 
 
 class CheatSheets extends React.Component{
@@ -36,7 +36,7 @@ class CheatSheets extends React.Component{
         return(
             <div className='container'>
                 <ul className='Thumbnail-img-list'>
-                {imageList.map((img, i) => {
+                {ImageList.map((img, i) => {
                     return(
                         
                                 <li className='Modal-img' key={i}> 
